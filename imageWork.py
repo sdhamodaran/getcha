@@ -6,5 +6,6 @@ def pickRandomImageName():
     imageIdArray = imageCount()
     lengthOfArray = len(imageIdArray)
     randomNumber = randomizer(lengthOfArray)
+    print randomNumber
     name = fetchURL(imageIdArray[randomNumber])
     return name
