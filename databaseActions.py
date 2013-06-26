@@ -2,7 +2,7 @@
 import psycopg2
 def connect():
     try:
-        conn = psycopg2.connect(database='camuto_dev',user='dhamodaran')
+        conn = psycopg2.connect(database='XXXXXX',user='dhamodaran')
         cur = conn.cursor()
         return cur
     except:
