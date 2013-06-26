@@ -14,14 +14,14 @@ def imageCount():
         cursor.execute("Select id from Images")
         ids = cursor.fetchall
         properlyFormedIds = [x[0] for x in ids]
-        return len(properlyFormedIds), properlyFormedIds
+        return properlyFormedIds
     except:
-        return "Cursor error"
+        return None
 
 def fetchURL(randomNumber):
     cursor = connect()
     try:
-        cursor.execute("Select name from Images where id= ")
+        cursor.execute("Select name from Images where id= "+str(randomNumber)+";")
         name = cursor.fetchone()
         return name
     except:
